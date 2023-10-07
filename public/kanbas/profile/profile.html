@@ -3,128 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link href="profile.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <!------------------ **************Script for fontawesome icon kit************** ------------------>
+    <script src="https://kit.fontawesome.com/39329b5a23.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!--First Table-->
-<table border="0"   cellspacing="15%" aria-rowspan="45">
-    <thead>
-    <tr>
+<!--Fixed Position | Left Kanbas Navigation-->
+<div class="wd-grid-row">
+     <div class="wd-nav-col wd-bg-color-black
+                            wd-padding-fat center-nav-content">
 
-    </tr>
-    </thead>
-    <tbody>
+         <div class="list-group">
+             <i class="fa-solid fa-n fa-5x" style="color: darkred"></i>
 
-    <!--First Row-->
-    <tr>
-        <ul>
-            <td><li><a href="../profile/profile.html">Account</a></li></td>
-            <td><li><a href="../home/home.html">Notifications</a></li></td>
+             <a href="../profile/profile.html" style="background-color: white; color: red" >
+                 <i class="fa-solid fa-user fa-2x" style="color: grey"></i>
+                 <br/>Account</a><br/>
 
-        </ul>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-gauge-high fa-2x" style="color: red"></i>
+                 </br>Dashboard</a></br>
 
-    </tr>
+             <a href="../home/home.html" style="color: white">
+                 <i class="fa-solid fa-book fa-2x" style="color: red"></i>
+                 </br>Courses</a></br>
 
-    <!--Second Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Dashboard</a></li></td>
-            <td><li><a href="../profile/profile.html">Profile</a></li></td>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-calendar-days fa-2x" style="color: red"></i>
+                 </br>Calendar</a></br>
 
-        </ul>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-envelope-open-text fa-2x" style="color: red"></i>
+                 </br>Inbox</a></br>
 
-    </tr>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-clock fa-2x" style="color: red"></i>
+                 </br>History</a></br>
 
-    <!--Third Row-->
-    <tr>
-            <td><li><a href="../home/home.html">Courses</a></li></td>
-            <td><li><a href="#">Files</a></li></td>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-network-wired fa-2x" style="color: red"></i>
+                 </br>Studio</a></br>
 
-                <td rowspan="10" colspan="90">
-                    Jose Annunziato's Profile
-                    <h3>Jose Annunziato</h3>
-                    <a href="../profile/edit.html" ><button>Edit Profile</button></a>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-right-from-bracket fa-2x" style="color: red"></i>
+                 </br>Commons</a></br>
 
-                    <h3>Contact</h3>
-                    <p>No registered services, you can add some on the settings page.</p>
+             <a href="#" style="color: white">
+                 <i class="fa-solid fa-question-circle fa-2x" style="color: red"></i>
+                 </br>Help</a></br>
+         </div>
+     </div>
+</div>
+<!--Fixed Left Kanbas Navigation Ends Here-->
 
-                    <h3>Biography</h3>
-                    <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+<!--Fixed Position | Second From Left Account Navigation-->
+<div class="wd-grid-row-2">
 
-                    <h3>Links</h3>
-                    <a href="https://www.youtube.com/"><p>YouTube</p></a>
-                </td>
-    </tr>
+    <div class="wd-nav-col-2">
 
-    <!--Fourth Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Calendar</a></li></td>
-            <td><li><a href="#">Settings</a></li></td>
+        <div class="list-group">
+            <a href="../home/home.html" style="color: red">Notifications</a>
+            <a href="../profile/profile.html" style="color: black">Profile</a>
+            <a href="#" style="color: red">Files</a>
+            <a href="#" style="color: red">Settings</a>
+            <a href="#" style="color: red">ePortfolios</a>
+            <a href="#" style="color: red">Shared Content</a>
+            <a href="#" style="color: red">The Hub</a>
+            <a href="#" style="color: red">Qwickly Course </br>Tools</a>
+            <a href="#" style="color: red">Global </br>Announcements</a>
+        </div>
 
-        </ul>
+    </div>
+</div>
+<!--Fixed Second From Left Account Navigation Ends Here-->
 
-    </tr>
+<!--Fixed Second From Left Account Navigation-->
+<div class="wd-grid-row-2">
 
-    <!--Fifth Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Inbox</a></li></td>
-            <td><li><a href="#">ePortfolios</a></li></td>
 
-        </ul>
 
-    </tr>
+    <div class="wd-nav-col-3">
 
-    <!--Sixth Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">History</a></li></td>
-            <td><li><a href="#">Shared Content</a></li></td>
+        <div class="top-hamburger-nav">
+            <i class="fa-solid fa-bars" style="color: red"></i>
+            <p> Jose Annunziato's Profile</p>
+        </div>
+        <i class="fa-solid fa-user fa-6x" style="color: grey"></i>
+            <h3>Jose Annunziato</h3>
+            <a href="../profile/edit.html" ><button>Edit Profile</button></a>
 
-        </ul>
+            <h3>Contact</h3>
+            <p>No registered services, you can add some on the settings page.</p>
+            <h3>Biography</h3>
+            <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
 
-    </tr>
+            <h3>Links</h3>
+            <a href="https://www.youtube.com/"><p>YouTube</p></a>
 
-    <!--Seventh Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Studio</a></li></td>
-            <td><li><a href="#">The Hub</a></li></td>
-
-        </ul>
-
-    </tr>
-
-    <!--Eighth Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Commons</a></li></td>
-            <td><li><a href="#">Qwickly Course Tools</a></li></td>
-
-        </ul>
-
-    </tr>
-
-    <!--Ninth Row-->
-    <tr>
-        <ul>
-            <td><li><a href="#">Help</a></li></td>
-            <td><li><a href="#">Global Announcements</a></li></td>
-        </ul>
-
-    </tr>
-
-    </tbody>
-    <!--
-    <tfoot>
-    <tr>
-        <td colspan="3">Average</td>
-        <td>90</td>
-    </tr>
-    </tfoot>
-    -->
-</table>
+    </div>
+</div>
 
 
 

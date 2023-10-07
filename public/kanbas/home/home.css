@@ -1,0 +1,116 @@
+/*.wd-grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+}*/
+.a {
+    text-decoration: none;
+}
+.wd-grid-row {
+    clear: both;
+}
+
+.wd-nav-col {
+    width: 9%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.wd-nav-col-2 {
+    width: 10%;
+    position: fixed;
+    left: 170px;
+    top: 40px;
+    text-decoration: none;
+}
+
+.wd-nav-col-3 {
+    width: 40%;
+    position: relative;
+    left: 370px;
+    top: 40px;
+}
+
+.top-hamburger-nav {
+    left: 3070px;
+    top: 40px;
+}
+
+.center-nav-content {
+    text-align: center;
+}
+
+.list-group-item {
+    background-color: black;
+}
+
+.list-group-item-action{
+    background-color: black;
+}
+
+.active {
+    background-color: white;
+}
+
+.wd-bg-color-black {
+    background-color: #000000;
+}
+
+.wd-fg-color-white {
+    background-color: #ffffff;
+}
+
+.wd-padding-fat {
+    padding: 10px;
+}
+
+.top-button-padding-right {
+    padding-right: 5px;
+}
+
+.wd-grid-row2 {
+    clear: both;
+}
+
+.button-col {
+    width: 200%;
+    position: relative;
+    left: 400px;
+    top: 15px;
+}
+
+.wd-dimension-portrait {
+    width: 75px;
+    height: 100px;
+}
+
+.wd-float-left {
+    float: left;
+}
+
+.wd-float-right {
+    float: right;
+    height: 100px;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.modules {
+    position: relative;
+    width: 900px;
+    top: 40px;
+    margin-left: 20%;
+}
+
+.course-status-grid-row {
+    clear: both;
+}
+
+.course-status-nav-col {
+    width: 35%;
+    position: relative;
+    left: 75%;
+    margin-top: -80%;
+}

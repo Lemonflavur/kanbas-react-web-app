@@ -32,6 +32,9 @@ p#id-selector-2 {
 .wd-fg-color-red { color: #ff7070; }
 .wd-fg-color-green { color: green; }
 
+.wd-bg-color-black {
+    background-color: #ffff07;
+}
 .wd-bg-color-yellow {
     background-color: #ffff07;
 }
