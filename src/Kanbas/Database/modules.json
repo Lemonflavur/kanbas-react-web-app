@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to html and css",
+    "description": "Understanding how to utilize html and css features.",
+    "course": "CS101"
+  },
+  {
+    "_id": "M102",
+    "name": "Introduction to Bootstrap",
+    "description": "Understanding how to utilize Bootstraps features.",
+    "course": "CS101"
+  },
+  {
+    "_id": "Introduction to Javascript and React",
+    "name": "Nozzle Design",
+    "description": "Understanding how to utilize Javascript and React features.",
+    "course": "CS101"
+  }
+  ]

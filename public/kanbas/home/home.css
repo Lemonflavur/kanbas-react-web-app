@@ -2,26 +2,67 @@
     width: 20%;
     float: left;
 }*/
-.a {
-    text-decoration: none;
-}
+
+
 .wd-grid-row {
     clear: both;
 }
 
-.wd-nav-col {
-    width: 9%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
+/******Kanbas Navigation css starts here******/
+.kanbas-nav > li > a {
+    text-decoration: none;
 }
 
-.wd-nav-col-2 {
-    width: 10%;
+.kanbas-nav > li {
+    padding: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.kanbas-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 85px;
     position: fixed;
-    left: 170px;
-    top: 40px;
+    text-align: center;
+    background-color: black;
+    left: 0;
+    top: 0;
+}
+
+.course-nav .active {
+    background-color: white;
+    width: 85px;
+}
+
+/******Course Navigation css starts here******/
+.course-nav > li > a {
     text-decoration: none;
+}
+
+.course-nav > li {
+    padding: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.course-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    text-align: left;
+    left: 110px;
+    top: 130px;
+}
+
+.course-nav active-course-nav{
+    border-left: 3px solid black;
+    color: black;
 }
 
 .wd-nav-col-3 {
@@ -48,9 +89,7 @@
     background-color: black;
 }
 
-.active {
-    background-color: white;
-}
+
 
 .wd-bg-color-black {
     background-color: #000000;

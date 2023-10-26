@@ -1,0 +1,15 @@
+
+.button-col {
+    width: 200%;
+    position: relative;
+    left: 400px;
+    top: 15px;
+}
+
+.wd-float-left {
+    float: left;
+}
+
+.top-button-padding-right {
+    padding-right: 5px;
+}

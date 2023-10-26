@@ -1,0 +1,12 @@
+[
+  { "id": "CS101",
+    "name": "Discrete Structures", "number": "CS5002", "startDate": "2023-01-10",
+    "endDate": "2023-05-15"
+  },
+  { "id": "CS102",
+    "name": "Web Development", "number": "CS5610", "startDate": "2023-01-10", "endDate": "2023-05-15"
+  },
+  { "id": "CS103",
+    "name": "Mobile Application Development", "number": "CS5520", "startDate": "2023-01-10", "endDate": "2023-05-15"
+  }
+]
