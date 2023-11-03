@@ -1,6 +1,9 @@
 /******Kanbas Navigation css starts here******/
 .kanbas-nav > li > a {
     text-decoration: none;
+    background-color: black;
+    color: white;
+    border: none;
 }
 
 .kanbas-nav > li {
@@ -10,8 +13,7 @@
     cursor: pointer;
 }
 
-.kanbas-nav{
-    list-style-type: none;
+.kanbas-nav {
     margin: 0;
     padding: 0;
     width: 120px;
@@ -22,7 +24,7 @@
     top: 0;
 }
 
-.kanbas-nav active {
+.kanbas-nav .active {
     background-color: white;
-    width: 120px;
+    color: red;
 }

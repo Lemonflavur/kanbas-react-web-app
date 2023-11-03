@@ -1,0 +1,31 @@
+.course-info {
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 100px;
+}
+
+.button-col {
+    width: 200%;
+    position: relative;
+    left: 2px;
+    top: 5px;
+}
+
+.wd-float-left {
+    float: left;
+}
+
+.top-button-padding-right {
+    padding-right: 5px;
+}
+
+.course-status-grid-row {
+    clear: both;
+}
+
+.course-status-nav-col {
+    width: 35%;
+    position: relative;
+    left: 45%;
+    margin-top: -80%;
+}

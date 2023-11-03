@@ -1,4 +1,4 @@
-import "./topButtons.css";
+import "./index.css";
 
 function topButtons() {
 

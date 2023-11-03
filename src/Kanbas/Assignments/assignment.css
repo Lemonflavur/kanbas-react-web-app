@@ -1,0 +1,25 @@
+.list-group-item {
+    background-color: black;
+}
+
+.list-group-item-action{
+    background-color: black;
+}
+
+.modules {
+    position: relative;
+    width: 900px;
+    top: 40px;
+    margin-left: 20%;
+}
+
+.course-status-grid-row {
+    clear: both;
+}
+
+.course-status-nav-col {
+    width: 35%;
+    position: relative;
+    left: 75%;
+    margin-top: -80%;
+}

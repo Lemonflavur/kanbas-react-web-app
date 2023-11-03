@@ -1,0 +1,53 @@
+/*.wd-grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+}*/
+
+
+.wd-grid-row {
+    clear: both;
+}
+
+.button-col {
+    width: 200%;
+    position: relative;
+    left: 400px;
+    top: 15px;
+}
+
+.courses1 {
+    position: absolute;
+    width: 2000px;
+    top: 40px;
+    margin-left: 1%;
+
+}
+
+h2 {
+    margin-left: 9.3%;
+}
+.fa-ellipsis-vertical {
+    margin-left: 270px;
+    color: black;
+}
+.dashboard-cards {
+    margin-left: 4%;
+}
+
+.card-img-top {
+    width: 286px;
+    height: 180px;
+    background-color: #0a53be;
+}
+
+.card {
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.button {
+    margin-left: 50px;
+}
+
