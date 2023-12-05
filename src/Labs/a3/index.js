@@ -8,7 +8,6 @@ import TodoItem from "./todo/TodoItem";
 import TodoList from "./todo/TodoList";
 import { useSelector } from "react-redux";
 
-
 function Assignment3() {
     const { todos } = useSelector((state) => state.todosReducer);
     return (

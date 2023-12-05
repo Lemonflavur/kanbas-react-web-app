@@ -9,18 +9,18 @@
 }
 
 /******Kanbas Navigation css starts here******/
-.kanbas-nav > li > a {
+.signin-nav > li > a {
     text-decoration: none;
 }
 
-.kanbas-nav > li {
+.signin-nav > li {
     padding: 5px;
     margin-bottom: 5px;
     white-space: nowrap;
     cursor: pointer;
 }
 
-.kanbas-nav{
+.signin-nav{
     list-style-type: none;
     margin: 0;
     padding: 0;

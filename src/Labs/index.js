@@ -2,11 +2,13 @@ import Nav from "../Nav";
 import Assignment3 from "./a3";
 import Assignment4 from "./a4";
 import Assignment5 from "./a5";
+//import Assignment6 from "../Project/a6";
 import store from "./store";
 import { Provider } from "react-redux";
 
 import {Routes, Route, Navigate}
     from "react-router";
+
 
 function Labs() {
     return (
