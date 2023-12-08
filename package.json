@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "link-users": "nodes_modules/.bin/symlink ../users src/Project/users/signin",
+    "link-users": "nodes_modules/.bin/symlink ../users ../kanbas-node-server-app/Project/users/signin",
     "postinstall": "npm run link-users"
   },
   "eslintConfig": {
