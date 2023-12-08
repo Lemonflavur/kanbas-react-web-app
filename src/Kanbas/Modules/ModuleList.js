@@ -9,8 +9,8 @@ import {
     setModule,
     setModules,
 } from "./modulesReducer";
-import * as client from "./client";
-import {createModule, findModulesForCourse} from "./client";
+import * as client from "../../../../kanbas-node-server-app/modules/client";
+import {createModule, findModulesForCourse} from "../../../../kanbas-node-server-app/modules/client";
 function ModuleList() {
     const { courseId } = useParams();
     const handleUpdateModule = async () => {
