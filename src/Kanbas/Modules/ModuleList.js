@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect, useState } from "react";
 import './moduleList.css'
+import Database from "../Database";
+
 import {
     addModule,
     deleteModule,
@@ -9,20 +11,15 @@ import {
     setModule,
     setModules,
 } from "./modulesReducer";
-import * as client from "../../../../kanbas-node-server-app/modules/client";
-import {createModule, findModulesForCourse} from "../../../../kanbas-node-server-app/modules/client";
-function ModuleList() {
-    const { courseId } = useParams();
-    const handleUpdateModule = async () => {
-        const status = await client.updateModule(module);
-        dispatch(updateModule(module));
-    };
+//import * as client from "../../../../kanbas-node-server-app/modules/client";
+//import {createModule, findModulesForCourse} from "../../../../kanbas-node-server-app/modules/client";
+import {createModule, findModulesForCourse} from "./client";
+import * as client from "./client";
 
-    const handleDeleteModule = (moduleId) => {
-        client.deleteModule(moduleId).then((status) => {
-            dispatch(deleteModule(moduleId));
-        });
-    };
+/*********************** Temporary Commented out html-ish code ***********************/
+function ModuleList() {
+
+    const { courseId } = useParams();
 
     useEffect(() => {
         findModulesForCourse(courseId)
@@ -31,15 +28,27 @@ function ModuleList() {
             );
     }, [courseId]);
 
-    const modules = useSelector((state) => state.modulesReducer.modules);
-    const module = useSelector((state) => state.modulesReducer.module);
-    const dispatch = useDispatch();
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
+    const handleDeleteModule = (courseId) => {
+        client.deleteModule(courseId).then((status) => {
+            dispatch(deleteModule(courseId));
+        });
+    };
 
     const handleAddModule = () => {
         createModule(courseId, module).then((module) => {
             dispatch(addModule(module));
         });
     };
+
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
 
     return (
 
@@ -53,23 +62,26 @@ function ModuleList() {
                             <ul className="dropdown-menu list-group">
 
                                 <li className="list-group-item">
-                                    <button onClick={handleAddModule}
-                                            className="btn btn-success">
+                                    <button
+                                        onClick={handleAddModule}
+                                        className="btn btn-success">
                                         Add</button>
-
-                                    <button onClick={handleUpdateModule}
-                                            className="btn btn-primary">
+                                    <button
+                                        onClick={handleUpdateModule}
+                                        className="btn btn-primary">
                                         Update
-                                    </button>
+                                    </button><br/>
 
                                     <input value={module.name}
-                                           onChange={(e) =>
-                                               dispatch(setModule({ ...module, name: e.target.value }))}
+                                           onChange={(e) => setModule({
+                                               ...module, name: e.target.value })}
                                     />
                                     <textarea value={module.description}
-                                              onChange={(e) =>
-                                                  dispatch(setModule({ ...module, description: e.target.value }))}
+                                              onChange={(e) => setModule({
+                                                  ...module, description: e.target.value })}
                                     />
+
+
                                 </li>
 
 
@@ -79,6 +91,7 @@ function ModuleList() {
                                                 <li key={index} className=" list-group-item-grey fw-bold ">
                                                     <a className="dropdown-item"><h3>{module.name}</h3></a>
                                                     <div className="edit_delete_btn">
+
                                                         <button
                                                             onClick={() => dispatch(setModule(module))}
                                                             className="btn btn-warning">
@@ -90,6 +103,7 @@ function ModuleList() {
                                                             className="btn btn-danger">
                                                             Delete
                                                         </button>
+
                                                     </div>
 
                                                     <hr className="dropdown-divider"/>

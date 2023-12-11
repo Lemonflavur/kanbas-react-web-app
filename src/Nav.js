@@ -1,5 +1,8 @@
 //import Signin from "../kanbas-node-server-app/users/signin";
 import { Link, useLocation } from "react-router-dom";
+
+// <Link to="/users/signin"
+//                       className={`nav-link ${pathname.includes("signin") ? "active" : ""}`}>Project</Link>
 function Nav() {
     const { pathname } = useLocation();
     return (
@@ -11,8 +14,8 @@ function Nav() {
                       className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}>Assignment 3</Link>
                 <Link className="nav-link" to="/Labs/a4">Assignment 4</Link>
                 <Link className="nav-link" to="/Labs/a5">Assignment 5</Link>
-                <Link to="/users/signin"
-                      className={`nav-link ${pathname.includes("signin") ? "active" : ""}`}>Project</Link>
+                <Link to="/project"
+                      className={`nav-link ${pathname.includes("project") ? "active" : ""}`}>Project</Link>
                 <Link to="/hello"
                       className={`nav-link ${pathname.includes("hello") ? "active" : ""}`}>Hello</Link>
                 <Link to="/Kanbas"

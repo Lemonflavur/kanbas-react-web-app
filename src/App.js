@@ -2,19 +2,26 @@
 import './App.css';
 import Labs from "./Labs";
 
+//import ModuleRoutes from "./Modules/routes.js";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
+import Project from "./project";
+
+/*
 import Project from "../../kanbas-node-server-app/Project/users";
 
+<Route path="/"         element={<Navigate to="/project"/>}/>
+
+*/
 function App() {
   return (
       <HashRouter>
         <div>
           <Routes>
-              <Route path="/"         element={<Navigate to="/project"/>}/>
-              <Route path="/Project/*" element={<Project />} />
+              <Route path="/"         element={<Navigate to="/Labs"/>}/>
+              <Route path="/project/*"    element={<Project/>}/>
               <Route path="/hello"    element={<HelloWorld/>}/>
               <Route path="/Labs/*"   element={<Labs/>}/>
               <Route path="/Kanbas/*" element={<Kanbas/>}/>

@@ -1,6 +1,7 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 import db from "../Database";
+import axios from "axios";
 import './dashboard.css';
 
 function Dashboard(
@@ -9,6 +10,12 @@ function Dashboard(
 ) {
 
     const coursesC = db.courses;
+    const promise = axios.get("http://localhost:4000/api/courses")
+
+    promise.then((response) => {
+        console.log(response);
+    });
+
     let getCourseCount = coursesC.length;
 
     return (
