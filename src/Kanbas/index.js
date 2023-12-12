@@ -29,6 +29,7 @@ function Kanbas() {
             })
         );
         setCourse({ name: "" });
+        return response.data;
     };
 
     const deleteCourse = async (courseId) => {
@@ -36,6 +37,8 @@ function Kanbas() {
             `${URL}/${course._id}`
         );
         setCourses(courses.filter((course) => course._id !== courseId));
+        return response.data;
+
     };
 
     const addNewCourse = async () => {
