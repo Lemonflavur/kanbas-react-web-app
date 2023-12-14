@@ -5,6 +5,7 @@ import { BsFillCheckCircleFill, BsTrash3Fill, BsPencil, BsPlusCircleFill } from 
 Fake cooment
  */
 import * as client from "./client.js";
+import {Link} from "react-router-dom";
 
 function UserTable() {
 
@@ -115,9 +116,12 @@ function UserTable() {
                 </thead>
                 <tbody>
                 {users.map((user) => (
-
                     <tr key={user._id}>
-                        <td>{user.username}</td>
+                        <td>
+                            <Link to={`/project/account/${user._id}`}>
+                                {user.username} </Link>
+                        </td>
+
                         <td>{user.firstName}</td>
                         <td>{user.lastName}</td>
 

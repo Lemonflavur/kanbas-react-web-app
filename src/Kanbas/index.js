@@ -4,10 +4,11 @@ import Dashboard from "./Dashboard";
 //import store from "./store";
 import Courses from "./Courses";
 import db from "./Database";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import {BiPlus} from "react-icons/bi";
 
 
 function Kanbas() {
@@ -75,7 +76,7 @@ function Kanbas() {
                 <div>
                     <Routes>
                         <Route path="/" element={<Navigate to="Dashboard" />} />
-                        <Route path="Account" element={<h1>Account</h1>} />
+                        <Route path="Account" element={ <h1>Account</h1>} />
                         <Route path="Dashboard" element={
                             <Dashboard
                                 courses={courses}
