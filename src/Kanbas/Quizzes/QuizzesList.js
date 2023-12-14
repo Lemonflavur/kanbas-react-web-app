@@ -8,7 +8,7 @@ import {Link, useNavigate, useParams} from "react-router-dom";
 import {findQuizById} from "./client";
 //import {createQuizCredentials, createQuizInfo, deleteQuiz} from "./client";
 
-function QuizzesList() {
+function QuizzesList(course) {
 
     const { courseId } = useParams();
     const links = ["Home", "Modules", "Assignments", "Grades", "Quizzes" ,

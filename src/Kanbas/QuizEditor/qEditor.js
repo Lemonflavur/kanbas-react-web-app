@@ -25,7 +25,9 @@ function QEditor() {
         setQuizzes(quizzes);
     };
 
-
+    const save = async () => {
+        await client.updateQuiz(quiz);
+    };
 
     useEffect(() =>
     { fetchQuizzes();
@@ -110,18 +112,76 @@ function QEditor() {
                                 checked={quiz.multipleAttempts}
                                 className="float-start"
                             />
-
                             Multiple Attempts
                         </div>
+
+                        <br/>
+                            <div className="form-control">
+                                <br/>
+                                <div>
+                                    <b>Assign to</b>
+                                    <input
+                                        type="text"
+                                        checked={quiz.forWhichUser}
+
+                                    />
+                                </div>
+
+                                <br/>
+                                <div>
+                                    <b>Due</b>
+                                    <input
+                                        type="text"
+                                        value={quiz.endDate}
+
+                                    />
+                                </div>
+                                <br/>
+
+                                <div>
+                                    <b>Available from</b>
+                                    <input
+                                        type="date"
+                                        value={quiz.availableFrom}
+
+                                    />
+                                    <b>Until</b>
+                                    <input
+                                        type="date"
+                                        value={quiz.endDate}
+
+                                    />
+                                </div>
+
+                                <br/>
+                                Notify users this quiz has changed
+                                <input
+                                    type="checkbox"
+                                    checked={quiz.shuffleAnswer}
+                                    className="float-start"
+                                />
+
+
+                                <br/>
+                                <button
+                                    className="btn btn-light btn-outline-dark w-20">
+                                    Cancel
+                                </button>
+
+                                <button
+                                    className="btn btn-light btn-outline-dark w-20">
+                                    Save & Publish
+                                </button>
+
+                                <button
+                                    onClick={save}
+                                    className="btn btn-danger w-20">
+                                    Save
+                                </button>
+
+                            </div>
                     </div>
 
-
-
-                    <input
-                        className="form-control"
-                        placeholder="Unnamed Quiz"
-                        value={quiz.quizname}
-                        onChange={(e) => setQuiz({ ...quiz, quizname: e.target.value })}/>
                 </div>
             </div>
 
