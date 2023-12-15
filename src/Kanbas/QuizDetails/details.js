@@ -26,6 +26,7 @@ function Details() {
             {quizInfo && (
                 <div>
                     <b>Quiz Name</b>
+
                     <input
                         type="text"
                         value={quizInfo.quizname}

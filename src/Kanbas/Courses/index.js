@@ -11,6 +11,7 @@ import axios from "axios";
 import Quizzes from "../Quizzes";
 import QuizDetails from "../QuizDetails";
 import QuizEditor from "../QuizEditor";
+import QuizQuestions from "../QuizQuestions";
 
 
 function Courses() {
@@ -53,6 +54,7 @@ function Courses() {
                         <Route path="QuizDetails" element={<QuizDetails/>}/>
                         <Route path="/QuizDetails/:_id" element={<QuizDetails/>} />
                         <Route path="QuizEditor" element={<QuizEditor/>}/>
+                        <Route path="QuizQuestions" element={<QuizQuestions/>} />
 
 
                         <Route path="Grades" element={<Grades/>} />

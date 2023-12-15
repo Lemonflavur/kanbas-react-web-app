@@ -6,3 +6,4 @@ function QuestionsTab() {
         </div>
     )
 }
+export default QuestionsTab;

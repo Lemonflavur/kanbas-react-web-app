@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import * as client from "../Quizzes/client";
 
 function QEditor() {
-
+    const { courseId } = useParams();
     const [quizzes, setQuizzes] = useState([]);
     const [quiz, setQuiz] = useState({quizname: "", status: "", endDate: "", points: "", questionCount: "" });
 
@@ -26,7 +26,8 @@ function QEditor() {
     };
 
     const save = async () => {
-        await client.updateQuiz(quiz);
+        //await client.updateQuiz(quiz);
+        navigate(`/Kanbas/Courses/${courseId}/QuizDetails`);
     };
 
     useEffect(() =>
