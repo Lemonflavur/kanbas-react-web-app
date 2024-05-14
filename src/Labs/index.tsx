@@ -6,7 +6,7 @@ import Lab3 from "./Lab3";
 export default function Labs() {
     return (
         <div id="wd-labs">
-            <h1>Tinashe Mazaiwana</h1>
+            <h1>Tinashe Mazaiwana | Section 1</h1>
             <p>Repository Link : https://github.com/Lemonflavur/kanbas-react-web-app</p>
             <h1>Labs</h1>
             <TOC />
