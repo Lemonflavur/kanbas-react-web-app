@@ -7,7 +7,7 @@ export default function Labs() {
     return (
         <div id="wd-labs">
             <h1>Tinashe Mazaiwana</h1>
-            <p>Repository Link : </p>
+            <p>Repository Link : https://github.com/Lemonflavur/kanbas-react-web-app</p>
             <h1>Labs</h1>
             <TOC />
             <Routes>
