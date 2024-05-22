@@ -1,0 +1,11 @@
+.form-outline s {
+  position: center;
+  margin-left: 10%;
+}
+
+margin {
+  margin: 40%;
+}
+.right-align {
+  align-content: flex-end;
+}
