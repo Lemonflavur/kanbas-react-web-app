@@ -1,4 +1,9 @@
+import {useParams} from "react-router-dom";
+import * as db from "../../Database";
+
 export default function AssignmentEditor() {
+    
+    const assignments = db.assignments;
   return (
     <div id="wd-assignments-editor">
         <div className="mb-3">
@@ -7,6 +12,7 @@ export default function AssignmentEditor() {
             <br /><br />
 
             <input type="assignment name" className="form-control" id="wd-name" value="A1" />
+         
           <br /><br />
 
             <div className="mb-3" id="wd-description">

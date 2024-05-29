@@ -3,14 +3,19 @@ import AssignmentButtons from "./AssignmentButtons";
 import {BsGripVertical} from "react-icons/bs";
 import LessonControlButtons from "../Modules/LessonControlButtons";
 import { TfiWrite } from "react-icons/tfi";
+import * as db from "../../Database";
+import {useParams} from "react-router-dom";
 
 export default function Assignments() {
+    const { cid } = useParams();
+    const assignments = db.assignments;
     return (
         <div id="wd-assignments">
 
             <AssignmentButtons /> <br /><br /><br /><br />
 
             <ul id="wd-assignments-title" className="list-group rounded-0">
+                
                 <li className="wd-assignments-title list-group-item p-0 mb-5 fs-5 border-gray">
                     <div className="wd-title p-3 ps-2 bg-secondary">
                         <BsGripVertical className="me-2 fs-3" />
