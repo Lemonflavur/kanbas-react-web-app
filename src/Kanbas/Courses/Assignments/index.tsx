@@ -5,10 +5,18 @@ import LessonControlButtons from "../Modules/LessonControlButtons";
 import { TfiWrite } from "react-icons/tfi";
 import * as db from "../../Database";
 import {useParams} from "react-router-dom";
+import {useState} from "react";
+import { addAssignment, deleteAssignment, updateAssignment, editAssignment }
+    from "./reducer";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Assignments() {
+    
     const { cid } = useParams();
-    const assignments = db.assignments;
+    const [assignmentName, setAssignmentName] = useState("");
+    const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+    const dispatch = useDispatch();
+    
     return (
         <div id="wd-assignments">
 
@@ -21,7 +29,7 @@ export default function Assignments() {
                         <BsGripVertical className="me-2 fs-3" />
                         ASSIGNMENTS 40% of Total
                         <FaPlus className="position-relative me-2" style={{ bottom: "1px" }} />
-                        <LessonControlButtons />
+                        
                     </div>
                     <ul className="wd-lessons list-group rounded-0">
                         <li className="wd-lesson list-group-item p-3 ps-1">
@@ -32,7 +40,7 @@ export default function Assignments() {
                             </a>
                               Multiple Modules | <b>Not available until</b> May 6 at 12:00am |
                             <br/><b>Due</b> May 13 at 11:59pm | 100 pts
-                            <LessonControlButtons />
+                            
                         </li>
 
                         <li className="wd-lesson list-group-item p-3 ps-1">
@@ -43,7 +51,7 @@ export default function Assignments() {
                             </a>
                             Multiple Modules | <b>Not available until</b> May 13 at 12:00am |
                             <br/><b>Due</b> May 20 at 11:59pm | 100 pts
-                            <LessonControlButtons />
+                            
                         </li>
 
                         <li className="wd-lesson list-group-item p-3 ps-1">
@@ -54,7 +62,7 @@ export default function Assignments() {
                             </a>
                             Multiple Modules | <b>Not available until</b> May 20 at 12:00am |
                             <br/><b>Due</b> May 27 at 11:59pm | 100 pts
-                            <LessonControlButtons />
+                            
                         </li>
                     </ul>
                 </li>
