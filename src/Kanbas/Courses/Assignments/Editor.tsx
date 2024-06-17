@@ -1,14 +1,31 @@
 import {useParams} from "react-router-dom";
 import * as db from "../../Database";
+import {BsGripVertical} from "react-icons/bs";
+import LessonControlButtons from "./LessonControlButtons";
 
 export default function AssignmentEditor() {
-    
+    const { cid } = useParams();
     const assignments = db.assignments;
   return (
     <div id="wd-assignments-editor">
         <div className="mb-3">
+            <ul id="wd-assignments-title" className="list-group rounded-0">
+                {assignments
+                    .filter((assignment: any) => assignment.course === cid)
+                    .map((assignment: any) => (
+                        <li className="wd-assignments-title list-group-item p-0 mb-5 fs-5 border-gray">
+                            <div className="wd-title p-3 ps-2 bg-secondary">
+                                <BsGripVertical className="me-2 fs-3" />
+                                {/* Assignment Name should display here*/}
+                                <label htmlFor="wd-name" className="form-label"> {assignment.title}</label>
+                                <LessonControlButtons />
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
 
-            <label htmlFor="wd-name" className="form-label"> <b>Assignment Name</b></label>
+            
             <br /><br />
 
             <input type="assignment name" className="form-control" id="wd-name" value="A1" />

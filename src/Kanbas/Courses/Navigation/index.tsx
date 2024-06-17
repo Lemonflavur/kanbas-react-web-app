@@ -16,6 +16,7 @@ export default function CoursesNavigation() {
         {label: "Assignments", path: "/Kanbas/Courses/_id/Assignments"},
         {label: "Quizzes", path: "/Kanbas/Courses/_id/Quizzes"},
         {label: "Grades", path: "/Kanbas/Courses/_id/Grades"},
+        {label: "People", path: "/Kanbas/Courses/${cid}/People"}
     ];
     
     return (
