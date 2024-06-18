@@ -105,17 +105,18 @@ export default function PeopleDetails({ fetchUsers }: {fetchUsers: () => void; }
             
             <div>
                 <label htmlFor="wd-role-selector"> <b>Role:</b></label>
-                <select id="wd-role-selector" value={user.role}
+                <select id="wd-role-selector"
+                        value={user.role}
                         onChange={(e) => saveRole(e.target.value)}
-                        className="form-control float-start w-25 me-2">
+                        className="form-control w-50 me-2">
                     <option defaultValue={user.role}></option>
                     <option value="STUDENT">Students</option>
                     <option value="TA">Assistants</option>
                     <option value="FACULTY">Faculty</option>
                     
-                </select> <br/><br/>
-                
-                <b>Roles:</b> {user.role} <br />
+                </select> <br/>
+    
+                {/*<b>Roles:</b> {user.role} <br />*/}
             </div>
             <b>Login ID:</b> {user.loginId} <br />
             <b>Section:</b> {user.section} <br />      <b>Total Activity:</b> {user.totalActivity}

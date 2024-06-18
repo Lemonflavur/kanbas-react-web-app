@@ -2,6 +2,12 @@ import axios from "axios";
 export const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER; //Grabs information from the backend
 export const USERS_API = `${REMOTE_SERVER}/api/users`; //Grabs User information using the backend API
 
+
+export const signin = async (credentials: any) => {
+    const response = await axios.post( `${USERS_API}/signin`, credentials );
+    return response.data;
+};
+
 //Creates a user
 export const createUser = async (user: any) => {
     const response = await axios.post(`${USERS_API}`, user);
