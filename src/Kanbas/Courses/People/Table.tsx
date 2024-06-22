@@ -35,7 +35,7 @@ export default function PeopleTable() {
         } else {
             fetchUsers();
         }
-    }
+    };
     const filterUserByRole = async (role: string) => {
         setRole(role);
         if (role) {

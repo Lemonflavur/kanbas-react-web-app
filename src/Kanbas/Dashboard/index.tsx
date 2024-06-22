@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import * as db from "../Database";
 import * as client from "../Courses/client";
+import * as enrollmentClient from "../Courses/Enrollments/client";
 export default function Dashboard(
     
     { courses, course, setCourse, addNewCourse,
@@ -11,12 +12,25 @@ export default function Dashboard(
         updateCourse: () => void; })
 {
     const [publishedCourses, setPublishedCourses] = useState<any[]>([]);
+    const [enrolledCourses, setEnrolledCourses] = useState<any[]>([]);
+    
+    const fetchEnrolledCourses = async () => {
+        const enrolledCourses = await enrollmentClient.findMyEnrollments();
+        setEnrolledCourses(enrolledCourses);
+    };
+    
     const fetchPublishedCourses = async () => {
         const courses = await client.fetchPublishedCourses();
         setPublishedCourses(courses);
-    }
+    };
+    
+    const enrollInCourse = async (courseId: string) => {
+      await enrollmentClient.createEnrollment(courseId);
+    };
+    
     useEffect(() => {
         fetchPublishedCourses();
+        fetchEnrolledCourses();
     }, []);
     
     return (
@@ -98,24 +112,30 @@ export default function Dashboard(
                 <div className="row row-cols-1 row-cols-md-5 g-4">
                     {courses.map((course) => (
                         <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-                            <Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none" >
+                            {/*<Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none"></Link>*/}
                                 <div className="card rounded-3 overflow-hidden">
                                     <img src="/images/rptgtpxd-1396254731.png" height="{160}" />
                                     <div className="card-body">
-                    <span className="wd-dashboard-course-link"
-                          style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }} >
-                      {course.name}
-                    </span>
+                                        <span
+                                            className="wd-dashboard-course-link"
+                                            style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }} >
+                                            
+                                            {/******* Enrollment button is below ********/}
+                                            <button
+                                                onClick={() => enrollInCourse(course._id)}
+                                                className="btn btn-success float-end">
+                                                Enroll
+                                            </button>
+                                            
+                                            {course.name}
+                                        </span>
                                         <p className="wd-dashboard-course-title card-text" style={{ maxHeight: 53, overflow: "hidden" }}>
                                             {course.description}
                                         </p>
-                                        
-                                        <Link className="btn btn-success float-end"
-                                            to={`/Kanbas/Courses/${course._id}`}>Enroll</Link>
 
                                     </div>
                                 </div>
-                            </Link>
+                            
                         </div>
                     ))}
                 </div>

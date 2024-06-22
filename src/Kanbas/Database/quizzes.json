@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "Quiz1",
+    "name": "html & css",
+    "status": "Closed",
+    "dueDate": "2024-06-15",
+    "points": "40 pt",
+    "quantity": "D123",
+    "course": "RS103"
+  },
+  {
+    "_id": "Quiz2",
+    "name": "Javascript",
+    "status": "Closed",
+    "dueDate": "2024-06-20",
+    "points": "40 pt",
+    "quantity": "D123",
+    "course": "RS103"
+    },
+  {
+    "_id": "Quiz3",
+    "name": "MongoDB Databases",
+    "status": "Available",
+    "dueDate": "2024-06-28",
+    "points": "40 pt",
+    "quantity": "D123",
+    "course": "RS103"
+  }
+]
