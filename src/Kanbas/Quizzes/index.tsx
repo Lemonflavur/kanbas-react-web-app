@@ -10,9 +10,23 @@ export default function () {
     
     const { cid } = useParams();
     const [ quizzes, setQuizzes ] = useState<any[]>(db.quizzes);
+    const [quizName, setQuizName] = useState("");
+    //const quizPoints = us
+    
+    
+    const addQuiz = () => {
+        setQuizzes([ ...quizzes, { _id: new Date().getTime().toString(),
+            name: quizName, course: cid } ]);
+        setQuizName("");
+    };
+    
+    const deleteQuiz = (quizID: string) => {
+        setQuizzes(quizzes.filter((q) => q._id !== quizID));
+    };
+    
     return (
         <div>
-            <QuizControls/><br/> <br/><hr/>
+            <QuizControls setQuizName={setQuizName} quizName={quizName} addQuiz={addQuiz}/><br/> <br/><hr/>
             <ul id="wd-quizzes" className="list-group rounded-0">
                 {quizzes
                     .filter((quiz) => quiz.course === cid)
@@ -30,7 +44,9 @@ export default function () {
                                     {quiz.name} <br/>
                                     {quiz.status} | {quiz.dueDate} | {quiz.points} | {quiz.quantity}
                                     LEARNING OBJECTIVES
-                                    <LessonControlButtons/>
+                                    <LessonControlButtons
+                                        quizId={quiz._id}
+                                        deleteQuiz={deleteQuiz}/>
                                 </li>
                                 
                             </ul>
