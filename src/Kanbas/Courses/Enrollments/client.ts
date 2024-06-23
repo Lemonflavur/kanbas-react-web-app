@@ -7,9 +7,9 @@ const axiosWithCredentials = axios.create({
 const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
 const ENROLLMENTS_API = `${REMOTE_SERVER}/api/enrollments`;
 
-export const createEnrollment = async (courseId: string) => {
+export const createEnrollment = async (id: string) => {
     const response = await axiosWithCredentials.post(ENROLLMENTS_API, {
-        course: courseId
+        course: id
     });
     return response.data;
 };
