@@ -1,29 +1,38 @@
 [
   {
     "_id": "Quiz1",
-    "name": "html & css",
+    "name": "Quiz 1 - html & css",
     "status": "Closed",
-    "dueDate": "2024-06-15",
-    "points": "40 pt",
-    "quantity": "D123",
-    "course": "RS103"
+    "dueDate": "Due June 15",
+    "points": 40,
+    "quantity": 11,
+    "course": "Language High Valerian"
   },
   {
     "_id": "Quiz2",
-    "name": "Javascript",
+    "name": "Quiz 2 - Javascript",
     "status": "Closed",
-    "dueDate": "2024-06-20",
-    "points": "40 pt",
-    "quantity": "D123",
-    "course": "RS103"
+    "dueDate": "Due June 20",
+    "points": 40,
+    "quantity": 11,
+    "course": "Language High Valerian"
     },
   {
     "_id": "Quiz3",
-    "name": "MongoDB Databases",
+    "name": "Quiz 2 - MongoDB Databases",
     "status": "Available",
-    "dueDate": "2024-06-28",
-    "points": "40 pt",
-    "quantity": "D123",
-    "course": "RS103"
+    "dueDate": "Due June 28",
+    "points": 40,
+    "quantity": 11,
+    "course": "Language High Valerian"
+  },
+  {
+    "_id": "Quiz4",
+    "name": "Quiz 4 - APIs Web",
+    "status": "Available",
+    "dueDate": "Due June 30",
+    "points": 40,
+    "quantity": 11,
+    "course": "Language High Valerian"
   }
 ]
